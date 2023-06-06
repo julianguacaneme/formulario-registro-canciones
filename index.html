@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+    <title>Formato de entrada de informacion de canciones catálogo arte sonoro</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Incluye tu música en nuestro catálogo</h1>
+    <p>Ingresa la información de tu canción en el siguiente formato, para que Arte Sonoro represente tu música</p>
+
+    <form action="formulario">
+       
+        <section id="sec-btns-superiores">
+            <div id="btns-obra" class="btn-superior">
+                <button class="btnSuperior">🎵 Obra</button>
+                <button class="btnSuperior">✍🏼 Compositor</button>
+                <button class="btnSuperior">⚖️ Porcentajes</button>
+                <button class="btnSuperior">📄 Documentos</button>
+            </div>
+
+            <div id="btns-fonograma" class="btn-superior inactive">
+                <button class="btnSuperior">📀 Grabación</button>
+                <button class="btnSuperior">💵 Productor</button>
+                <button class="btnSuperior">⚖️ Porcentajes</button>
+                <button class="btnSuperior">📄 Documentos</button>
+            </div>
+        </section>
+
+        <section id="sec-ingresar-datos">
+            <!-- Sección 1: datos de la obra -->
+            <div id="datos-obra">
+                <h2>Información de la obra</h2>
+                <label for="titulo-obra">Título</label>
+                <input id="titulo-obra" type="text" name="titulo-obra" required>
+                <br>
+                <label for="aka">AKA o título alternativo</label>
+                <input id="aka" type="text" name="aka" required>
+                <br>
+                <label for="iswc">Número ISWC</label>
+                <input id="iswc" type="text" name="iswc" required>
+                <br>
+                <label for="derecho-autor">Certificado de registro en oficina de derecho de autor</label>
+                <input id="derecho-autor" type="file" name="file" required>
+            </div>
+            
+            <!-- Sección 2: datos del o los compositor -->
+            <div id="datos-compositores" class="inactive">
+                <h2>Información autores y compositores</h2>
+                <div id="Compositor1">
+                    <h3>Compositor/autor 1</h3>
+            
+                    <label for="nombre-compositor">Nombre</label>
+                    <input id="nombre-compositor" type="text" name="nombre-compositor">
+            
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" autocomplete="on" required>
+                    <br>
+            
+                    <label for="aka-compositor">AKA, apodo o nombre artístico</label>
+                    <input id="aka-compositor" type="text" name="aka-compositor" autocomplete="on">
+                    <br>
+            
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" required>
+                        <option value="compositor">Compositor</option>
+                        <option value="autor" selected>Autor</option>
+                        <option value="autor-compositor" selected>Autor y Compositor</option>
+                    </select>
+                    <br>
+            
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="on" required>
+                    <br>
+            
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" required>
+                    <br>
+            
+                    <label for="pro">PRO</label>
+                    <p class="complemento">💡 Sociedad de gestion de gestión colectiva (Ejemplo: SAYCO)</p>
+                    <input type="text" id="pro" name="pro" value="ex. SAYCO" autocomplete="on" required>
+            
+                    <label for="ipi">Número IPI/CAE</label>
+                    <p class="complemento">💡 Se obtiene contactando a la PRO 👆🏼</p>
+                    <input type="number" id="ipi" name="ipi" autocomplete="on">
+                </div>
+            </div>
+
+            <!-- Sección 3: ingresa porcentajes de cada compositor -->
+            <div id="porcentajes-composicion" class="inactive">
+            </div>
+            <!-- Sección 4: datos del fonograma -->
+            <div id="datos-fonograma" class="inactive">
+                <h2>Información del fonograma</h2>
+                <div id="datos-fonograma">
+                    <label for="titulo-master">Título</label>
+                    <input id="titulo-master" type="text" name="titulo-master" required>
+                    <br>
+                    <label for="album">Album</label>
+                    <input id="album" type="text" name="album">
+                    <br>
+                    <label for="distribuidor">Distribuidor o aregador (Ejemplo: CDBABY)</label>
+                    <input id="distribuidor" type="text" name="distribuidor">
+                    <br>
+                    <label for="fecha-lanzamiento">Fecha de lanzamiento</label>
+                    <input id="fecha-lanzamiento" type="date" name="fecha-lanzamiento">
+                    <br>
+                    <br>
+                    <label for="registro-fonograma">Número de registro de fonograma en derecho de autor</label>
+                    <input id="registro-fonograma" type="text" name="registro-fonograma" required>
+                    <br>
+                    <label for="isrc">Número ISRC</label>
+                    <p class="complemento">💡Se puede obtener con la distribuidora o agregadora</p>
+                    <input id="isrc" type="text" name="isrc" required>
+                    <br>
+                    <label for="genero">Género</label>
+                    <input id="genero" type="text" name="genero" required>
+                    <label for="subgenero">Sub-Género</label>
+                    <input id="subgenero" type="text" name="subgenero">
+                    <br>
+                    <label for="bpm">BPM</label>
+                    <input id="bpm" type="number" name="bpm" required>
+                    <br>
+                    <label for="letra">Letra</label>
+                    <input id="letra" type="text" name="letra">
+                    <label for="idioma">Idioma</label>
+                    <input id="idioma" type="text" name="idioma">
+                    <br>
+                    <label for="tags">Tags</label>
+                    <input id="tags" type="text" name="tags" required>
+                    <br>
+                    <label for="notas-uso">Notas de comercialización/uso</label>
+                    <input id="notas-uso" type="text" name="notas-uso">
+            
+                </div>
+            </div>
+
+            <!-- Sección 5 : datos del o los dueños del master -->
+            <div id="datos-master-owner" class="inactive">
+                <h2>Información del/los dueño/s del master o fonograma</h2>
+                <div id="master-owner1">
+                    <h3>Dueño del fonograma 1</h3>
+                </div>
+            </div>
+
+            <!-- Sección 6: ingresa porcentajes de cada dueño del master -->
+            <div id="porcentajes-master-owner" class="inactive">
+                
+            </div>
+
+            <!-- Sección 7: verificar datos ingresados -->
+
+        </section>
+
+        <section id="sec-btns-inferiores" class="btnInferiores">
+            <div id="btns-infer-obra">
+                <button id="guardar-obra" type="button">Guardar y continuar</button>
+            </div>
+
+            <div id="btns-inferiores-compositores" class="btnInferiores inactive">
+                <button id="guardar-compositor" type="button">Guardar Compositor</button>
+            
+               <button id="agregar-compositor" type="button">Agregar nuevo compositor</button>
+
+                <button id="fin-compositores" type="button">No hay mas compositores</button>
+              
+            </div>
+
+            <div id="btns-inferiores-porcentaje-compositor" class="inactive">
+                <p>Verifique los porcentajes participación de cada autor o compositor antes de continuar</p>
+                <button id="guardar-porcentajes-obra" type="button">Siguiente</button>
+            </div>
+
+            <div id="btns-inferiores-fonograma" class="inactive">
+                <button id="guardar-fonograma" type="button">Guardar y continuar</button>
+            </div>
+
+            <div id="btns-inferiores-owner" class="inactive">
+                <p>Si existe otro dueño del master o grabación de click en el botón Agregar nuevo dueño de master, de lo
+                    contrario de click en el botón siguiente</p>
+                <button id="agregar-master-owner" type="button">Agregar nuevo dueño de master</button>
+                <button id="guardar-owner" type="button">Siguiente</button>
+            </div>
+            <div id="btns-inferiores-porcentaje-owners" class="inactive">
+                <p>Verifique los porcentajes participación de cada dueño de fonograma antes de continuar</p>
+                <button id="guardar-porcentajes-owner" type="button">Guardar y continuar</button>
+            </div>
+        
+        </section>
+
+    </form>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

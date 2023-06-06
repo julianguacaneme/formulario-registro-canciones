@@ -1,0 +1,129 @@
+/* Estilos para la página web */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+button {
+    display: block;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+#secBtnsSuperiores {
+    background-color: blueviolet ;
+}
+
+.btn-superior {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.btnSuperior {
+    margin-right: 10px;
+}
+
+
+.inactive {
+    display: none;
+}
+
+/* Estilo para el contenedor de cada compositor en la lista */
+.compositor-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para el nombre y rol del compositor */
+.compositor-nombre-rol {
+    flex: 1;
+    min-width: 50%;
+}
+
+/* Estilo para la casilla de porcentaje de participación */
+.compositor-participacion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    min-width: 50%;
+}
+
+.complemento {
+    color: grey;
+
+}
+
+/* Estilos para la página web en dispositivos móviles */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select {
+        font-size: 14px;
+    }
+}
